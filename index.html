@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Notification App — Design System</title>
+    <link rel="stylesheet" href="./design-system.css" />
+  </head>
+  <body>
+    <header class="topbar" role="banner">
+      <div class="topbar__inner">
+        <div class="brand">Job Notification App</div>
+        <div class="progress" aria-label="Progress indicator">Step 1 / 4</div>
+        <div class="topbar__right">
+          <span class="badge badge--neutral" aria-label="Status badge">Not Started</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="container" role="main">
+      <section class="context" aria-label="Context header">
+        <h1 class="headline">Design system foundation</h1>
+        <p class="subtext">
+          Calm, coherent primitives for layout, typography, spacing, and components—built for a serious B2C SaaS
+          experience with intentional whitespace and predictable UI.
+        </p>
+      </section>
+
+      <section class="workspace" aria-label="Primary workspace and secondary panel">
+        <div class="primary" aria-label="Primary workspace">
+          <article class="card" aria-label="Core components">
+            <header class="card__header">
+              <div>
+                <h2 class="card__title">Core components</h2>
+                <div class="card__meta">Buttons, inputs, badges, cards, states. No product features.</div>
+              </div>
+              <span class="badge badge--accent">Accent</span>
+            </header>
+            <div class="card__body card__stack">
+              <div class="row" aria-label="Form inputs">
+                <div>
+                  <label class="label" for="email">Email</label>
+                  <input class="input" id="email" type="email" placeholder="name@company.com" autocomplete="email" />
+                  <p class="help">Clean borders, clear focus, consistent radius. Body text sits at 16px with 1.7 line-height.</p>
+                </div>
+                <div>
+                  <label class="label" for="role">Role</label>
+                  <select class="select" id="role">
+                    <option selected>Choose a role…</option>
+                    <option>Product Designer</option>
+                    <option>Software Engineer</option>
+                    <option>Data Analyst</option>
+                  </select>
+                  <p class="help">Text blocks cap at 720px to keep reading calm and confident.</p>
+                </div>
+              </div>
+
+              <div>
+                <label class="label" for="notes">Notes</label>
+                <textarea class="textarea" id="notes" placeholder="Short, specific, actionable…"></textarea>
+                <p class="help">No random sizes or spacing. Only 8/16/24/40/64px spacing tokens are used.</p>
+              </div>
+
+              <div class="divider" role="separator"></div>
+
+              <div aria-label="Buttons">
+                <div class="label">Buttons</div>
+                <div class="btnrow">
+                  <button class="btn btn--primary" type="button">Primary action</button>
+                  <button class="btn btn--secondary" type="button">Secondary action</button>
+                  <button class="btn btn--ghost" type="button">Tertiary</button>
+                  <button class="btn btn--secondary" type="button" disabled>Disabled</button>
+                </div>
+                <p class="help">Transitions are 150–200ms, ease-in-out. No bounce, no animation noise.</p>
+              </div>
+
+              <div class="divider" role="separator"></div>
+
+              <div aria-label="States">
+                <div class="label">Error & empty states</div>
+                <div class="callout callout--error" role="alert" aria-label="Error state example">
+                  <p class="callout__title">We couldn’t save this change.</p>
+                  <p class="callout__body">Check your connection, then try again. If it continues, refresh the page and retry once.</p>
+                </div>
+
+                <div class="callout callout--warning" aria-label="Warning state example">
+                  <p class="callout__title">This looks incomplete.</p>
+                  <p class="callout__body">Add a role so we can format results consistently across the UI.</p>
+                </div>
+
+                <div class="callout" aria-label="Empty state example">
+                  <p class="callout__title">Nothing here yet.</p>
+                  <p class="callout__body">Start by entering an email and selecting a role. The UI will guide the next step.</p>
+                </div>
+
+                <div class="callout callout--success" aria-label="Success state example">
+                  <p class="callout__title">Saved and consistent.</p>
+                  <p class="callout__body">Your change matches the spacing, typography, and component rules in this system.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <aside class="secondary panel" aria-label="Secondary panel">
+          <article class="card" aria-label="Step explanation">
+            <header class="card__header">
+              <div>
+                <h2 class="card__title">Step explanation</h2>
+                <div class="card__meta">How this system stays coherent</div>
+              </div>
+              <span class="badge badge--success">In Progress</span>
+            </header>
+            <div class="card__body card__stack">
+              <div class="callout" aria-label="Guidance">
+                <p class="callout__title">Purpose</p>
+                <p class="callout__body">
+                  Establish calm defaults: a strict spacing scale, a restrained color system, and predictable component anatomy.
+                  This keeps pages readable and reduces visual churn.
+                </p>
+              </div>
+
+              <div class="promptbox" aria-label="Copyable prompt box">
+                <div class="promptbox__field">
+                  <div class="label">Copyable prompt</div>
+                  <pre class="codefield" id="prompt" tabindex="0">Use the design system tokens and components.
+Do not invent spacing values.
+Keep typography consistent.
+Favor subtle borders over shadows.</pre>
+                </div>
+                <div class="btnrow">
+                  <button class="btn btn--primary" type="button" id="copyPrompt">Copy</button>
+                  <button class="btn btn--secondary" type="button">Continue</button>
+                </div>
+                <p class="help">Buttons are styled consistently. Prompt is readable, focused, and intentionally spaced.</p>
+              </div>
+            </div>
+          </article>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="proof" aria-label="Proof footer checklist">
+          <h2 class="proof__title">Proof</h2>
+          <div class="checklist">
+            <label class="check"><input type="checkbox" /> UI Built</label>
+            <label class="check"><input type="checkbox" /> Logic Working</label>
+            <label class="check"><input type="checkbox" /> Test Passed</label>
+            <label class="check"><input type="checkbox" /> Deployed</label>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        const btn = document.getElementById("copyPrompt");
+        const prompt = document.getElementById("prompt");
+        if (!btn || !prompt) return;
+
+        btn.addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(prompt.textContent || "");
+            btn.textContent = "Copied";
+            btn.disabled = true;
+            window.setTimeout(() => {
+              btn.textContent = "Copy";
+              btn.disabled = false;
+            }, 1200);
+          } catch {
+            btn.textContent = "Copy failed";
+            window.setTimeout(() => {
+              btn.textContent = "Copy";
+            }, 1200);
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
+
